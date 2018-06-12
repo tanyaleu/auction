@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>The Request Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Enter The Request Details</h1>
+<form action="#" th:action="@{/request}" th:object="${newrequest}" method="post">
+    <p>Product: <input type="text" th:field="*{product}"/></p>
+
+    <p>Price: <input type="text" th:field="*{price}"/></p>
+
+
+    <p>ItemsCount: <input type="text" th:field="*{itemsCount}"/></p>
+
+    <p>Type:
+        <select th:field="*{type}">
+
+            <option value="1">BUY</option>
+
+            <option value="0">SELL</option>
+
+        </select>
+    </p>
+
+    <p>Quality: <input type="text" th:field="*{quality}"/></p>
+
+    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+</form>
+<h2> Return to <a th:href="@{/user}">User page </a></h2>
+</body>
+</html>
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Requests</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<h2><a th:href="@{/requests/process}">Process</a></h2>
+<h2>List of Requests</h2>
+
+<table>
+    <tr>
+        <th>RequestId</th>
+        <th>Product</th>
+        <th>ItemsCount</th>
+        <th>Price</th>
+        <th>Type</th>
+        <th>Quality</th>
+    </tr>
+    <tr th:each="request : ${requests}">
+        <td th:text="${request.requestId}">requestId</td>
+        <td th:text="${request.product}">product</td>
+        <td th:text="${request.itemsCount}">itemsCount</td>
+        <td th:text="${request.price}">price</td>
+        <td th:text="${request.type}">type</td>
+        <td th:text="${request.quality}">quality</td>
+    </tr>
+</table>
+
+<h2> Return to <a th:href="@{/user}">User page </a></h2>
+</body>
+</html>

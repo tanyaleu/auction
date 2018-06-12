@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Users</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<h2>List of Users</h2>
+
+<table>
+    <tr>
+        <th>UserId</th>
+        <th>Name</th>
+        <th>Login</th>
+        <th>Password</th>
+
+    </tr>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.userId}">userId</td>
+        <td th:text="${user.name}">name</td>
+        <td th:text="${user.login}">login</td>
+        <td th:text="${user.password}">password</td>
+
+    </tr>
+</table>
+
+<h2> Return to <a th:href="@{/admin}">Admin page </a></h2>
+</body>
+</html>
+

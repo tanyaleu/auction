@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>The Request Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>The Request Details</h1>
+<p th:text="'requestId: ' + ${request.requestId}"/>
+<p th:text="'product: ' + ${request.product}"/>
+
+<p th:text="'requester: ' + ${request.requester}"/>
+<p th:text="'price: ' + ${request.price}"/>
+<p th:text="'itemsCount: ' + ${request.itemsCount}"/>
+
+<p th:text="'type: ' + ${request.type}"/>
+<p th:text="'quality: ' + ${request.quality}"/>
+
+
+<h2> Return to <a th:href="@{/user}">User page </a></h2>
+</body>
+</html>
